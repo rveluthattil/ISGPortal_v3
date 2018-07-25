@@ -1,0 +1,38 @@
+<!-- <p>
+  alertmatrix works!
+</p> -->
+
+<div class="row content">
+	<div class="col-sm-3 sidebar">
+		<h4>Applications</h4>
+		<!-- <li class="active"><a href="#"><img src="../../../../assets/icons/cyclop-marvel.png"></a></li>
+		<li><a href="#"><img src="../../../../assets/icons/jean-grey.png"></a></li>
+		<li><a href="#"><img src="../../../../assets/icons/professor-x.png"></a></li>
+		<li><a href="#"><img src="../../../../assets/icons/rogue.png"></a></li>
+		<li><a href="#"><img src="../../../../assets/icons/storm-marvel.png"></a></li>-->
+      <ul class="nav nav-pills nav-stacked">
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" routerLink="/servermanagement">Server Information</a></li>
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" routerLink="/alertmatrix">Alert Matrix</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Family</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Photos</a></li>
+      </ul>			
+	</div>
+	<div class="col-sm-9">
+		<div class="centerpanel" *ngFor="let course of alertmatrixdata">
+			<ngb-alert type="secondary" [dismissible]="false">
+				<h3><a href="#">{{course.Description}}</a></h3>
+				<p>{{course.NotificationDriver}}</p>
+				<div class="row">
+					<div class="col-sm-9">					
+						<a href="{{course.ResourceName}}" target="_blank" class="btn-btn-danger">Go To Alert</a>
+					</div>
+					<div class="col-sm-3" style="float:right">
+						<img src="../../../assets/icons/isgportal_tools.png" />
+						<img src="../../../assets/icons/isgportal_telephone.png" />
+						<img src="../../../assets/icons/nemail.png" />
+					</div>					
+				</div>
+			</ngb-alert>
+		</div>		
+	</div>
+</div>

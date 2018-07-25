@@ -1,0 +1,38 @@
+<!-- <ul>
+	<div *ngFor="let course of serverdata">
+		<ngb-alert type="secondary" [dismissible]="false">
+			<h3><a href="#">{{course.ShortHostName}}</a></h3>
+			<p>{{course.HostName}}</p>
+			<div>
+				<a href="{{course.ServerType}}" target="_blank" class="btn-btn-danger">Go To Course</a>
+			</div>
+		</ngb-alert>
+	</div>
+</ul> -->
+<div class="row content">
+	<div class="col-sm-3 sidebar">
+		<h4>Applications</h4>
+		<!-- <li class="active"><a href="#"><img src="../../../../assets/icons/cyclop-marvel.png"></a></li>
+		<li><a href="#"><img src="../../../../assets/icons/jean-grey.png"></a></li>
+		<li><a href="#"><img src="../../../../assets/icons/professor-x.png"></a></li>
+		<li><a href="#"><img src="../../../../assets/icons/rogue.png"></a></li>
+		<li><a href="#"><img src="../../../../assets/icons/storm-marvel.png"></a></li>-->
+      <ul class="nav nav-pills nav-stacked">
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" routerLink="/servermanagement">Server Information</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" routerLink="/alertmatrix">Alert Matrix</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Family</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Photos</a></li>
+      </ul>			
+	</div>
+	<div class="col-sm-9">
+		<div class="centerpanel" *ngFor="let course of serverdata">
+			<ngb-alert type="secondary" [dismissible]="false">
+				<h3><a href="#">{{course.ShortHostName}}</a></h3>
+				<p>{{course.HostName}}</p>
+				<div>
+					<a href="{{course.ServerType}}" target="_blank" class="btn-btn-danger">Go To Course</a>
+				</div>
+			</ngb-alert>
+		</div>		
+	</div>
+</div>
